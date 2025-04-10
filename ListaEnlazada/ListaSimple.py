@@ -9,6 +9,7 @@ class Nodo:
 class ListaSimple:
     def __init__(self):
         self.cabeza = None
+        self.final = None
         self.longitud = 0
 
     def esta_vacia(self):
@@ -20,18 +21,13 @@ class ListaSimple:
         self.cabeza = nuevo_nodo
         self.longitud += 1
 
-############PREGUNTA 1: Método insertar_final ###########
+    ############PREGUNTA 1: Método insertar_final ########
     # Método para insertar un nodo al final de la lista
-
-
-
-
-
-
-
-
-
-########################################################
+    def insert_final (self,valor):
+        nuevo = Nodo(valor)
+        nuevo.siguiente = self.final =  nuevo 
+        self.cabeza = nuevo
+        
     def eliminar_inicio(self):
         if self.esta_vacia():
             raise ValueError("No se puede eliminar de una lista vacía")
