@@ -21,13 +21,23 @@ class ListaSimple:
         self.longitud += 1
 
 ############PREGUNTA 1: Método insertar_final ###########
-    # Método para insertar un nodo al final de la lista
+    # Método para insertar un nodo al final de la lista simple.py
+    #insertar_inicio:10   10->None
+    #insertar_final:20   20->10->None
+    #insertar_final:30   20->10->30->None
+    # Se debe crear un nuevo nodo y recorrer la lista hasta el final para enlazarlo.
 
-
-
-
-
-
+#implemetar el método insertar_final
+    def insertar_final(self, valor):
+        nuevo_nodo = Nodo(valor)
+        if self.esta_vacia():
+            self.cabeza = nuevo_nodo
+        else:
+            actual = self.cabeza
+            while actual.siguiente:
+                actual = actual.siguiente
+            actual.siguiente = nuevo_nodo
+        self.longitud += 1
 
 
 
