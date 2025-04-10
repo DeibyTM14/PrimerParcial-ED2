@@ -49,7 +49,7 @@ def operaciones_listas():
             break
         else:
             print("Opción no válida. Intente de nuevo.")
-
+            
 def mostrar_menu_pila():
     print("\n--- Menú de Operaciones con Pilas ---")
     print("1. Apilar elemento")

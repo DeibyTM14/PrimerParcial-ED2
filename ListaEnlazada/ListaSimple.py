@@ -22,6 +22,15 @@ class ListaSimple:
 
 ############PREGUNTA 1: Método insertar_final ###########
     # Método para insertar un nodo al final de la lista
+    def insertar_final(self, dato):
+        nuevo_nodo = Nodo (dato)
+        if self.ListaSimple is None:
+            self.ListaSimple = nuevo_nodo
+        else:
+            actual = self.ListaSimple
+            while actual.siguiente:
+                actual = actual.siguiente
+            actual.siguiente = nuevo_nodo
 
 
 
