@@ -22,10 +22,8 @@ class Pila:
     # Desapila el elemento en la cima de la pila y lo devuelve.
     # Si la pila está vacía, lanza una excepción.
     ######################################################
-
-
-
-
+    def desapilar():
+        
 
 
 
