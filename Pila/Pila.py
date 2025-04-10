@@ -1,10 +1,10 @@
 class Nodo:
-    def __init__(self, valor):
+    def _init_(self, valor):
         self.valor = valor
         self.siguiente = None
 
 class Pila:
-    def __init__(self):
+    def _init_(self):
         self.cima = None
         self.longitud = 0
 
@@ -24,15 +24,16 @@ class Pila:
     ######################################################
 
 
+    def desapilar(self):
+        if self.esta_vacia():
+            raise Exception("No se puede desapilar de una pila vacia")
+        valor_desapilado = self.cima.valor
+        self.cima = self.cima.siguiente
+        self.longitud -= 1
+        return valor_desapilado
 
 
 
-
-
-
-
-
-########################################################################
     def ver_cima(self):
         if not self.esta_vacia():
             print("Error: Pila vacía")

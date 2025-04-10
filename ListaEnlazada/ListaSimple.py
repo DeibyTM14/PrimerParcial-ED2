@@ -1,13 +1,13 @@
 class Nodo:
-    def __init__(self, valor):
+    def _init_(self, valor):
         self.valor = valor
         self.siguiente = None
 
-    def __str__(self):
+    def _str_(self):
         return str(self.valor)
     
 class ListaSimple:
-    def __init__(self):
+    def _init_(self):
         self.cabeza = None
         self.longitud = 0
 
@@ -22,15 +22,18 @@ class ListaSimple:
 
 ############PREGUNTA 1: Método insertar_final ###########
     # Método para insertar un nodo al final de la lista
+    def insertar_final(self, valor):
+        nuevo_nodo = Nodo(valor)
+        if self.esta_vacia():
+            self.cabeza = nuevo_nodo
+        else:
+            actual = self.cabeza
+            while actual.siguiente:
+                actual = actual.siguiente
+            actual.siguiente = nuevo_nodo
+        self.longitud += 1
 
-
-
-
-
-
-
-
-
+        
 ########################################################
     def eliminar_inicio(self):
         if self.esta_vacia():
@@ -109,7 +112,7 @@ class ListaSimple:
             actual = actual.siguiente
         print("None")
 
-    def __str__(self):
+    def _str_(self):
         """Representación de cadena para la lista"""
         if self.esta_vacia():
             return "None"
